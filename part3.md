@@ -4,10 +4,10 @@
 ##1 - What is the difference between git pull and git merge?
 
 Git pull
-Pull changes in a repo, after someone else has made amendments
+Runs a git fetch and then a git merge . If you want to bring your local repository up to speed with a remote repository that is what you would run.
 
 Git merge
-Merge a branch with master so that changes from one branch are mixed into the master branch
+Merge a branch with master so that changes from one branch are mixed into the master branch, it closes use of the other branch.
 
 ##2 - Why do we use a pull request on github instead of merging our branch directly to master and then pushing it to github?
 
@@ -31,12 +31,16 @@ You can use @imports and @extends
 
 ##6 - What is the right way to include bootstrap to your project?
 
-Best way is to host within project directory, not through url.
-The put the css link in html head tag
+Best way is to put all css into one application.css, with the css link in html head tag
 
 ##7 - Why_variables.scss file is important?
 
-Lists all elements in bootstrap (not minified)
+All bootstrap styling values are defined in the_variables.scss. By changes those values we can theme/adjust bootstrap to our needs.
+
 ##8 - Lets say you want to change the alert component of bootstrap, what are steps/strategy would you use to make that change?
 
-uncomment out any elements in bootstrap you want to change
+1) Try to see if you can override the bootstrap_variables.scss file, by changing the variables_alerts.scss uses.
+
+2) If that isnt satisfactory then create your own_alerts.scss file under your custom /bootstrap folder and write the styling scoped to the .alert {}
+
+if your styling is unrelated to the bootstrap alert component you should create your own component file and include it in your build process, application.css
