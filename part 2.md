@@ -4,6 +4,16 @@
 
 ##1 - How would you design the routes of your server based on REST convention? List them with VERB and /route
 
+
+GET  /customers
+GET  /customers/new
+POST /customers
+GET  /customers/:id
+GET  /customers/:id/edit
+PUT /customers/:id
+DELETE /customers/:id
+
+
 CREATE
 
 app.post // post user data to db
@@ -73,14 +83,11 @@ The cars model would contain a foreign key constraint that references the factor
 
 beforeUpdate - code that runs before an update, e.g. always set a value on a model before saving it
 
-beforeCreate - code that runs before an update
-
-hasMany - add this hook to a model if there is a another model which takes a foreign key constraint from the current model.
-
-belongsTo - add this hook to a model to reference a foreign key constraint from another model.
-
 beforeDestroy - for example, delete data from other models that have foriegn keys referencing model data to be deleted.
       onDelete: 'cascade'
+
+beforeCreate - code that runs before the creation of a row in the database (edited)
+
 
 ##6 - What is the difference between database-level validations and application-level validations?
 
@@ -88,6 +95,7 @@ Application-level validations are things like 'is this an an email address?'
 
 Application-level validations compare user input to the constraints such as weather a password is long enough or that an email input is a valid email (contains '@')
 
+Application validations run before database constraints
 
 ##7 - Why do we use bcrypt. Write down 3 reasons why we use it if you can.
 
@@ -96,6 +104,9 @@ To save passwords in a db in an encrypted way, so that backend devs cannot have 
 Hackers are slowed down when they try different password options.
 
 It's widely used and thus widely supported.
+
+You can also compare two encrypted hashes to see if they are from the same source
+
 
 ##8 - What is a flash message?
 
