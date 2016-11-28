@@ -4,11 +4,12 @@ Explain the questions well!!
 
 ### 1- Why do we should include script tags at the very end of an html file, before closing </body>?
 
-We want the page to load all the content before JS event handler load to the page, so that all content is loaded before interaction takes place, and the JS functions as it is designed to. This also means the static content (html and css) will load faster and give the user a better experience.
+We want the page to load all the content before JS event handler load to the page, so that all content is loaded before interaction takes place, and the JS functions as it is designed to. This also means the static content will load faster and give the user a better experience.
 
 ### 2 - What is a middleware?
 
-It is a package which acts as glue between the express server and your app interface. It provided functions that are not available on the operating system, such as parsing data from a form or allowing a user to delete content.
+Middleware adds features to Express code.
+
 
 ### 3 - Why do we use express.static() middleware?
 
@@ -32,12 +33,16 @@ In order to delete content.
 
 ### 8 - What are the differences between sessions and cookies ?
 
-Sessions is stored on the server side, cookies on the client side.
+Sessions is stored on the server side, cookies on the client side. Cookies store data as objects, sessions store data as strings. Sessions is a more secure way of saving data. Cookies can be saved for a longer period of time.
+
+
 
 ### 9 - Why do we use a session middleware ?
 
-In order to use sessions, to store passwords securely (with encryption).
+In order to use sessions, to store data when a user is logged in. This means that
+
+
 
 ### 10 - Why do we use a build process ?
 
-To help us outline each step of the lifecycle of the model, to decide what to do before and after each step, create, update, delete.
+Gulp or Grunt is used to keep css and js file sizes as small (e.g. by minifying or uglifying files) as possible to give a good user experience. They are used to compile css and optimize images too.
