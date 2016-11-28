@@ -13,7 +13,7 @@ Middleware adds features to Express code.
 
 ### 3 - Why do we use express.static() middleware?
 
-In order to use css and js files in a public directory within an express app.
+In order to use css and js files in a public directory within an express app. It wraps the send module in order to support client-side caching.
 
 ### 4 - What is favicon.ico ?
 
@@ -25,11 +25,12 @@ In order to read form data that is posted from the client.
 
 ### 6 - What is the difference in terms of parsing data received from a web form with POST or an AJAX POST request?
 
-AJAX is used for updating a webpage as soon as data comes in, without refreshing the page or going to a different web page. For example, when you post a comment on Facebook, this uses an AJAX POST request. When you send in a contact form, this uses a POST request.
+AJAX post requests use JQUERY and JSON. 
 
 ### 7 - Why do we use methodOverride middleware ?
 
-In order to delete content.
+It provides provides faux HTTP method support, in order to use app.delete or app.put to edit and delete content.
+
 
 ### 8 - What are the differences between sessions and cookies ?
 
